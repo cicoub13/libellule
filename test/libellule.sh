@@ -1,5 +1,5 @@
 #!/bin/bash
-./speedtest-cli.py --simple > ./tmp_libellule
+/var/www/libellule/test/speedtest-cli.py --simple > ./tmp_libellule
 PING=`ping google.com -c 1 | sed -n "2 p" | awk '{print substr($0,length($0)-6,2)}'`
 DOWNLOAD=`sed -n "2 p" ./tmp_libellule | cut -c '11-15'`
 UPLOAD=`sed -n "3 p" ./tmp_libellule | cut -c '8-12'`
