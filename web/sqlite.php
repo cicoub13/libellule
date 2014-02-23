@@ -9,7 +9,7 @@ class DataBase {
   /* constructeur privé qui initialise la connexion*/
   private function __construct() {
     /* création d'un objet PDO avec les constantes définies dans la configuration */
-    $this->connexion = new PDO('sqlite:/home/pi/libellule/libellule.db');
+    $this->connexion = new PDO('sqlite:./test/libellule.db');
     /* mettre Exception comme mode d'erreur */
       $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
